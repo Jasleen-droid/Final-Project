@@ -1,0 +1,320 @@
+/* -------------------------------- */
+/* Style Stage Custom CSS */
+/* -------------------------------- */
+
+/* --- CSS Reset to maintain consistency across browsers --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Base Styles here  Setting up the body font, background and text basics --- */
+body {
+  font-family: 'Verdana', Arial, sans-serif;
+  background: linear-gradient(rgba(220, 219, 219, 0.8), rgba(255, 255, 255, 0.8)),
+              url('backgroungpink.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #636161;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* --- Headings: Giving headings a distinct style --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.04em;
+  color: #045072;
+  margin-bottom: 0.5em;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+/* --- Main heading (h1) special styling --- */
+h1 {
+  text-align: center;
+  margin: 1.5em auto;
+  padding: 1em 2em;
+  border: 4px solid #2d5f88;
+  border-radius: 12px;
+  background-color: #f5f7fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* keeps it snug around text */
+}
+
+/* --- Link Styling: Base and hover effects for a clean feel --- */
+a {
+  color: #9c4f10;
+  text-decoration: none;
+  transition: color 0.2s, box-shadow 0.2s;
+}
+
+a:hover,
+a:focus {
+  color: #4b86b4;
+  text-decoration: underline;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Lists (ul and ol): Add some default left margin and bottom space --- */
+ul,
+ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+/* --- Container: Wrapping everything nicely inside a centered box --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5em;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(42, 77, 105, 0.08);
+}
+
+/* --- Navigation Bar: Flexbox based, clean and centered --- */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #17a6ad;
+  color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+
+/* --- Navigation Links: Styling buttons in nav --- */
+nav a {
+  color: #ffffff80;
+  padding: 0.75em 1.5em;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 0 0.5em;
+}
+
+/* --- Hover and Focus states for nav links --- */
+nav a:hover,
+nav a:focus {
+  background-color: #fff;
+  color: #2a4d69;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Navigation List Reset and Flex Layout --- */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* --- Space between navigation list items --- */
+nav ul li {
+  margin: 0.5em;
+}
+
+/* --- Additional nav ul a cleanup --- */
+nav ul a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em 1em;
+  border: none;
+  background: none;
+}
+
+/* --- Responsive Navigation for Mobile Screens --- */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0.5em;
+  }
+}
+
+/* --- Enhanced Container Background and Shadow --- */
+.container {
+  background: linear-gradient(135deg, #f5f7fa 80%, #e3e9f1 100%);
+  box-shadow: 0 8px 32px rgba(42, 77, 105, 0.12);
+}
+
+/* --- Fancy Text Shadow for h1 --- */
+h1 {
+  text-shadow: 1px 2px 6px #e3e9f1;
+}
+
+/* --- Blockquote Styling: Highlight quotes nicely --- */
+blockquote {
+  border-left: 4px solid #bf5117;
+  padding-left: 1em;
+  font-style: italic;
+  color: #4b86b4;
+  background: #f9fafb;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Accessibility: Stronger Focus Outline for links --- */
+a:focus {
+  outline: 3px solid #f37736;
+  outline-offset: 4px;
+}
+
+/* --- Skip Link: For keyboard users to quickly skip navigation --- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  background: #f37736;
+  color: #fff;
+  padding: 0.5em;
+  z-index: 1000;
+}
+
+/* --- Hides unnecessary style elements --- */
+#styles .features::after,
+.features.patterned::after {
+  display: none;
+}
+
+/* --- Special Box: "How it works" section --- */
+.how-it-works {
+  border: 2px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* --- Small heading inside Style Stage --- */
+.style-stage-heading {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #f37736;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Featured Styles: Highlight specific items --- */
+.featured-styles {
+  border: 2px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* --- Icon Sizes (SVG) --- */
+svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Header Section Layout --- */
+header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* --- Features Section: Cards Layout --- */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em 0;
+  list-style: none;
+  margin: 0;
+}
+
+/* --- Feature Boxes Style --- */
+.features li {
+  flex: 1 1 calc(33.333% - 1em);
+  max-width: 300px;
+  background-color: #f5f7fa;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  text-align: center;
+}
+
+/* --- Inside Feature Boxes: Title and Author --- */
+.features li span {
+  display: block;
+  margin-top: 0.5em;
+}
+
+/* --- Feature Box Links --- */
+.features li a {
+  text-decoration: none;
+  color: #0788f2;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* --- Hover Effect for Feature Box Links --- */
+.features li a:hover {
+  color: #f37736;
+}
+
+/* --- Responsive Features Layout for Small Screens --- */
+@media (max-width: 700px) {
+  .features li {
+    flex: 1 1 100%;
+  }
+}
+
+/* --- Footer Styling Dark theme and centered text --- */
+.page-footer {
+  background-color: #2a4d69;
+  color: #000000;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+/* --- Footer Content Container --- */
+.page-footer .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Footer Text Styling --- */
+.page-footer p {
+  margin-bottom: 1em;
+  line-height: 1.5;
+  color: #000000;
+}
+
+/* --- Footer List Reset --- */
+.page-footer ul {
+  list-style: none;
+  padding: 0;
+}
+/* Citation: code with harry ,
+                w3schools.com */
